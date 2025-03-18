@@ -1,0 +1,12 @@
+For this simulation, I chose to take the central registry route. 
+The central register simply keeps track of connected peers.
+
+The following methods were intended to meet the protocol:
+send_offer: sends the offer message to all peers in the network
+send_file: transfers file in chunks of 5120 bytes until EOF
+send_ack: used in making sure that files transfer fully.
+
+- To register (join) with the central server, the peer sends an 'r' packet and the server notes its' unique peer id with its' address. 
+- To get the list of peers, the peer sends an 'l'
+
+Both the peers and the central server use threading, to be able to handle multiple peers. 

@@ -21,7 +21,7 @@ def create_socket(host, port):
 #register to the central server
 def register_peer():
     soc1 = create_socket('127.0.0.1', 8010)
-    packet = ['j', 1001, ('127.0.0.1', 8001)]
+    packet = ['j', 1001, ('127.0.0.1', 8002)]
     soc1.sendall(str(packet).encode())
 
 #send an offer messages and receive -------- every 30s --------------
@@ -113,4 +113,4 @@ peer_id = 1000
 #gonna store this as file: address
 files_to_request = {}
 
-start_server('127.0.0.1', 8000)
+start_server('127.0.0.1', 8002)
